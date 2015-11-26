@@ -79,7 +79,7 @@ func handle(w http.ResponseWriter, req *http.Request) {
 				return
 			}
 		}
-		if err := run(dir, "npm", "install"); err != nil {
+		if err := run(dir, "npm", "install", "--production"); err != nil {
 			reject(err)
 			return
 		}
